@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whitman Music Boosters - Donation Website
+
+A modern, responsive Next.js website for Whitman Music Boosters to accept donations via Donorbox.
+
+## Features
+
+- 🎵 Beautiful, modern design featuring the Whitman Music logo
+- 💳 Integrated Donorbox donation widget
+- 📱 Fully responsive design for all devices
+- ⚡ Fast loading with Next.js 14 and TypeScript
+- 🎨 Styled with Tailwind CSS
+- 🔍 SEO optimized with proper metadata
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd whitmanmusicboosters.org
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Donorbox Integration
 
-To learn more about Next.js, take a look at the following resources:
+The website includes a Donorbox iframe for accepting donations. To customize the donation form:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Current Setup
+The donation widget is currently pointing to a placeholder URL:
+```
+https://donorbox.org/embed/whitman-music-boosters-donation
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### To Set Up Your Own Donorbox Form:
 
-## Deploy on Vercel
+1. **Create a Donorbox Account:**
+   - Go to [donorbox.org](https://donorbox.org)
+   - Sign up for an account
+   - Create a new donation form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Customize Your Form:**
+   - Set your organization name as "Whitman Music Boosters"
+   - Add your mission statement
+   - Configure donation amounts
+   - Set up tax receipt settings
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Get Your Embed Code:**
+   - In your Donorbox dashboard, go to your form
+   - Click "Embed" or "Share"
+   - Copy the iframe embed code
+
+4. **Update the Website:**
+   - Open `src/app/page.tsx`
+   - Find the iframe section (around line 70)
+   - Replace the `src` attribute with your Donorbox form URL
+
+### Example Donorbox iframe:
+```html
+<iframe 
+  src="https://donorbox.org/embed/your-actual-form-name" 
+  name="donorbox" 
+  allowpaymentrequest="allowpaymentrequest" 
+  seamless="seamless" 
+  frameborder="0" 
+  scrolling="no" 
+  height="900px" 
+  width="100%"
+  style={{
+    maxWidth: '500px',
+    minWidth: '250px',
+    maxHeight: 'none!important'
+  }}
+></iframe>
+```
+
+## Customization
+
+### Logo
+The logo is located at `public/whitman-music-logo.svg`. You can replace this with your own logo file.
+
+### Colors and Styling
+The website uses a blue gradient theme. To customize colors, edit the Tailwind classes in `src/app/page.tsx`:
+
+- Background gradient: `bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900`
+- Text colors: `text-white`, `text-blue-100`, `text-blue-200`
+- Card backgrounds: `bg-white/10`
+
+### Content
+Update the mission statement, descriptions, and other text content in `src/app/page.tsx`.
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+The website can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
+
+## Build Commands
+
+```bash
+# Development
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Lint code
+npm run lint
+```
+
+## File Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx          # Main donation page
+│   ├── layout.tsx        # Root layout with metadata
+│   └── globals.css       # Global styles
+public/
+├── whitman-music-logo.svg # Logo file
+└── ...                   # Other static assets
+```
+
+## Support
+
+For questions about:
+- **Website functionality**: Check the Next.js documentation
+- **Donorbox integration**: Contact Donorbox support
+- **Whitman Music Boosters**: Contact your organization
+
+## License
+
+This project is for the exclusive use of Whitman Music Boosters.
