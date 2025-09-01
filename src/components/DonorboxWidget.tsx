@@ -20,7 +20,7 @@ export default function DonorboxWidget({campaign}: {campaign: string}) {
   }, [])
 
   return (
-    <div className="w-full max-w-md pl-6 pr-3">
+    <div className="w-full max-w-md pl-3 pr-3">
       <iframe 
         src={`https://donorbox.org/embed/${campaign}`} 
         name="donorbox" 
@@ -28,7 +28,7 @@ export default function DonorboxWidget({campaign}: {campaign: string}) {
         scrolling="no" 
         height="900px" 
         width="100%"
-        className="rounded-xl max-w-[500px] min-w-[250px] min-h-[700px] max-h-[800px] bg-white"
+        className="max-w-[500px] min-w-[250px] min-h-[600px] max-h-[700px] bg-white"
         title="Whitman Music Boosters Donation Form"
       ></iframe>
     </div>
