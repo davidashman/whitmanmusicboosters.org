@@ -21,7 +21,7 @@ export default function Home() {
           
           {/* Donorbox Integration */}
           <div className="flex justify-center">
-            <DonorboxWidget campaign="2025-2026-general-fundraising"/>
+            <DonorboxWidget campaign="fall-fundraising-campaign-2025-2026"/>
           </div>
         </div>
 
