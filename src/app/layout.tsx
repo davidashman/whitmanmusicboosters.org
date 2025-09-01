@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#1a1a1a]">
       <body className={`${baro.variable} font-sans antialiased`}>
         {children}
       </body>
