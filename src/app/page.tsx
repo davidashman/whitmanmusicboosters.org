@@ -2,8 +2,8 @@ import DonorboxWidget from '@/components/DonorboxWidget'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="mx-auto">
+    <main className="min-h-screen bg-[#1a1a1a]">
+      <div className="mx-auto bg-white">
         {/* Header with Logo */}
         <div className="text-center mb-12 pt-8 pb-10 bg-[#1a1a1a]">
           <div className="font-baro text-6xl text-[#4FC3F7]">WHITMAN</div>
