@@ -6,13 +6,12 @@ export default function Home() {
       <div className="mx-auto">
         {/* Header with Logo */}
         <div className="text-center mb-12 pt-8 pb-10 bg-[#1a1a1a]">
-          <div className="font-baro text-6xl text-[#4FC3F7]">WHITMAN</div>
-          <div className="font-baro text-6xl text-white">MUSIC</div>
+          <img src="/logo.png" alt="Whitman Music Boosters" className="w-1/2 mx-auto my-2 h-28 w-auto" />
         </div>
 
         {/* Donation Section */}
         <div className="bg-white/10 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#4FC3F7] mb-6 text-center font-baro">
+          <h2 className="text-3xl font-bold text-[#7198C8] mb-6 text-center font-baro">
             Support Our Music Program
           </h2>
           <p className="text-[#1a1a1a] text-center mb-8 text-lg font-baro pl-4 pr-4">
