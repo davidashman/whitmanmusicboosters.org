@@ -5,7 +5,7 @@ export default function Home({ params }: { params: { id: string } }) {
     <main className="min-h-screen bg-white">
       <div className="mx-auto">
         {/* Header with Logo */}
-        <div className="text-center mb-12 py-8 bg-[#1a1a1a]">
+        <div className="text-center mb-12 py-10 bg-[#1a1a1a]">
           <div className="text-4xl font-bold text-[#7198C8] text-center font-baro">
             {params.id.replace(/-/g, ' ')}
           </div>
