@@ -14,7 +14,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-[#7198C8] mb-6 text-center font-baro">
             Support Our Music Program
           </h2>
-          <p className="text-[#1a1a1a] text-center mb-8 text-lg font-baro pl-4 pr-4">
+          <p className="text-[#1a1a1a] text-center mb-8 text-lg font-baro px-4">
             Your generous donation helps us continue providing exceptional music education opportunities for Whitman students.
           </p>
           
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="text-center pt-12 pb-10 text-[#1a1a1a] pl-4 pr-4">
+        <footer className="text-center pt-12 pb-10 text-[#1a1a1a] px-4">
           <p className="text-sm font-baro">
             © 2025 Whitman Music Boosters. All donations are tax-deductible.
           </p>
