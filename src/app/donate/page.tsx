@@ -1,36 +1,23 @@
 import DonorboxWidget from '@/components/DonorboxWidget'
+import Copyright from '@/components/Copyright'
+import Header from '@/components/Header'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="mx-auto">
-        {/* Header with Logo */}
-        <div className="text-center mb-12 pt-8 pb-10 bg-[#1a1a1a]">
-          <img src="/logo.png" alt="Whitman Music Boosters" className="w-1/2 mx-auto my-2 h-28 w-auto" />
-        </div>
+    <main className="min-h-screen bg-white mx-auto">
+      <Header />
 
-        {/* Donation Section */}
-        <div className="bg-white/10 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#7198C8] mb-6 text-center font-baro">
-            Support Our Music Program
-          </h2>
-          <p className="text-[#1a1a1a] text-center mb-8 text-lg font-baro px-4">
-            Your generous donation helps us continue providing exceptional music education opportunities for Whitman students.
-          </p>
-          
-          {/* Donorbox Integration */}
-          <div className="flex justify-center">
-            <DonorboxWidget campaign="fall-fundraising-campaign-2025-2026"/>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <footer className="text-center pt-12 pb-10 text-[#1a1a1a] px-4">
-          <p className="text-sm font-baro">
-            © 2025 Whitman Music Boosters. All donations are tax-deductible.
-          </p>
-        </footer>
+      <div className="max-w-3xl mx-auto text-center font-baro font-bold mb-10">
+        <p className="text-3xl text-[#7198C8] mb-6">
+          Support Our Music Program
+        </p>
+        <p className="text-[#1a1a1a] text-lg px-4">
+          Your generous donation helps us continue providing exceptional music education opportunities for Whitman students.
+        </p>
       </div>
+
+      <DonorboxWidget campaign="fall-fundraising-campaign-2025-2026"/>
+      <Copyright />
     </main>
   )
 }

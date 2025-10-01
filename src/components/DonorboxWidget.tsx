@@ -20,7 +20,7 @@ export default function DonorboxWidget({campaign}: {campaign: string}) {
   }, [])
 
   return (
-    <div className="w-full max-w-md pl-3 pr-3">
+    <div className="flex justify-center max-w-3xl mx-auto w-full max-w-md px-3 my-8">
       <iframe 
         src={`https://donorbox.org/embed/${campaign}`} 
         name="donorbox" 
