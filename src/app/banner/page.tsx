@@ -7,7 +7,7 @@ export default function Banner() {
   const campaign = process.env.NEXT_PUBLIC_BANNER_CAMPAIGN || '2025-2026-general-fundraising';
   return (
     <main className="min-h-screen bg-white mx-auto">
-      <Header campaign={campaign} />
+      <Header />
       <SupportMessage />
       <DonorboxWidget campaign={campaign}/>
       <Copyright />
