@@ -3,12 +3,13 @@ import Copyright from '@/components/Copyright'
 import Header from '@/components/Header'
 import SupportMessage from '@/components/SupportMessage'
 
-export default function Home() {
+export default function Banner() {
+  const campaign = process.env.NEXT_PUBLIC_BANNER_CAMPAIGN || '2025-2026-general-fundraising';
   return (
     <main className="min-h-screen bg-white mx-auto">
-      <Header />
+      <Header campaign={campaign} />
       <SupportMessage />
-      <DonorboxWidget campaign="fall-fundraising-campaign-2025-2026"/>
+      <DonorboxWidget campaign={campaign}/>
       <Copyright />
     </main>
   )
