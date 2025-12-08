@@ -19,8 +19,11 @@ export default function DonorboxWidget({campaign}: {campaign: string}) {
     }
   }, [])
 
+  const title = campaign ? campaign.replace(/(?<!\d)-|-(?!\d)/g, ' ') : '';
+
   return (
-    <div className="flex justify-center max-w-3xl mx-auto w-full max-w-md px-3 my-8">
+    <div className="flex flex-col justify-center max-w-3xl mx-auto w-full max-w-md px-3 my-8">
+      <p className="text-xl font-bold mb-4 text-center font-baro text-[#7198C8]">{title}</p>
       <iframe 
         src={`https://donorbox.org/embed/${campaign}`} 
         name="donorbox" 

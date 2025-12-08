@@ -9,7 +9,7 @@ export default function Banner() {
     <main className="min-h-screen bg-white mx-auto">
       <Header />
       <SupportMessage />
-      <DonorboxWidget campaign={campaign}/>
+      <DonorboxWidget campaign={campaign} />
       <Copyright />
     </main>
   )
