@@ -5,7 +5,13 @@ declare namespace React {
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       > & {
-        id?: string;
+        id: string;
+      };
+      "givebutter-form": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & {
+        campaign: string;
       };
     }
   }

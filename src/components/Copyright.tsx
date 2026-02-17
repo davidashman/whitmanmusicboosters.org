@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 export default function Copywright() {
   return (
     <footer className="text-center text-[#1a1a1a] text-sm font-baro px-4 pb-10">
       © {new Date().getFullYear()} Whitman Music Boosters
-      <br/>
+      <br />
       All donations are tax-deductible.
     </footer>
-  )
+  );
 }
