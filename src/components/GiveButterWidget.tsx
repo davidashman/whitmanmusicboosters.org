@@ -33,7 +33,7 @@ export default function GiveButterWidget({
         </p>
       )}
       <givebutter-widget id={id}></givebutter-widget>
-      <p className="text-xs text-center  text-[#ccc]">{id}</p>
+      <p className="text-xs text-center  text-[#fff]">{id}</p>
     </div>
   );
 }
