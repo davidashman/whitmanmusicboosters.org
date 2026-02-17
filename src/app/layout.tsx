@@ -41,12 +41,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-[#1a1a1a]">
-      <head>
-        <script
-          async
-          src="https://widgets.givebutter.com/latest.umd.cjs?acct=sYraeByUy5pHEVbv&p=other"
-        ></script>
-      </head>
       <body className={`${baro.variable} font-sans antialiased`}>
         {children}
       </body>

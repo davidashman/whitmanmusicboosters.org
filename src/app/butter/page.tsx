@@ -4,15 +4,14 @@ import SupportMessage from "@/components/SupportMessage";
 import GiveButterWidget from "@/components/GiveButterWidget";
 
 export default function Banner() {
-  const campaign =
-    process.env.NEXT_PUBLIC_BANNER_CAMPAIGN || "2025-2026-general-fundraising";
-  const title = process.env.NEXT_PUBLIC_BANNER_TITLE;
+  const widget = process.env.NEXT_PUBLIC_BUTTER_WIDGET || "L4k8Wj";
+  const title = process.env.NEXT_PUBLIC_BUTTER_TITLE;
 
   return (
     <main className="min-h-screen bg-white mx-auto">
       <Header />
       <SupportMessage />
-      <GiveButterWidget campaign={campaign} title={title} />
+      <GiveButterWidget id={widget} title={title} />
       <Copyright />
     </main>
   );
