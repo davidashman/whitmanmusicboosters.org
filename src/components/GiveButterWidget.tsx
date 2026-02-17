@@ -28,7 +28,7 @@ export default function GiveButterWidget({
   return (
     <div className="flex flex-col justify-center max-w-3xl mx-auto w-full max-w-md px-3 mb-8">
       {title && (
-        <p className="mt-8 text-xl font-bold mb-4 text-center font-baro text-[#7198C8]">
+        <p className="text-xl font-bold mb-4 text-center font-baro text-[#7198C8]">
           {title}
         </p>
       )}
