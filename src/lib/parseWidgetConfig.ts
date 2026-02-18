@@ -1,10 +1,20 @@
+export interface WidgetConfig {
+  id: string;
+  title?: string;
+}
+
 export function parseWidgetConfig(
   envVar: string | undefined,
   fallbackId: string
-): { id: string; title?: string } {
+): WidgetConfig {
+  if (!envVar) return { id: fallbackId };
   try {
-    return JSON.parse(envVar ?? "");
+    const parsed = JSON.parse(envVar);
+    if (parsed && typeof parsed === "object" && typeof parsed.id === "string") {
+      return parsed as WidgetConfig;
+    }
   } catch {
-    return { id: fallbackId };
+    // invalid JSON — fall through to fallback
   }
+  return { id: fallbackId };
 }
