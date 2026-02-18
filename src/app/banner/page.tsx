@@ -2,16 +2,16 @@ import Copyright from "@/components/Copyright";
 import Header from "@/components/Header";
 import SupportMessage from "@/components/SupportMessage";
 import GiveButterWidget from "@/components/GiveButterWidget";
+import { parseWidgetConfig } from "@/lib/parseWidgetConfig";
 
 export default function Banner() {
-  const widget = process.env.NEXT_PUBLIC_BANNER_WIDGET || "jbOGOL";
-  const title = process.env.NEXT_PUBLIC_BANNER_TITLE;
+  const config = parseWidgetConfig(process.env.NEXT_PUBLIC_BANNER_WIDGET, "jbOGOL");
 
   return (
     <main className="min-h-screen bg-white mx-auto">
       <Header />
       <SupportMessage />
-      <GiveButterWidget id={widget} title={title} />
+      <GiveButterWidget id={config.id} title={config.title} />
       <Copyright />
     </main>
   );
